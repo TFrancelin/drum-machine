@@ -1,8 +1,7 @@
-// import {useState} from "react";
 import './App.css';
 import {AudioClip} from "./types.ts";
 import Drum from "../components/Drum.tsx";
-import {useState} from "react";
+import React from "react";
 
 const audioClips:AudioClip[] = [
   {
@@ -53,7 +52,6 @@ const audioClips:AudioClip[] = [
 ]
 
 function App() {
-  const [powerOn, setPowerOn] = useState<boolean>(false);
 
   const playAudio = (e:React.KeyboardEvent<HTMLDivElement>) => {
     const clip = audioClips.find(
