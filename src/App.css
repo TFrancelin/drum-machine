@@ -1,42 +1,54 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+.container {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #2f3f2f;
+    border-radius: 15px;
+    flex-direction: row;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.drum-pads {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    grid-template-rows: repeat(3, 1fr);
+    margin: 50px auto;
+    width: min-content;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.drum-pad {
+    background-color: #3f3f3f;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.264);
+    cursor: pointer;
+    border: 2px solid #2f2f2f;
+    color: white;
+    border-radius: 8px;
+    transition: all 0.2s ease-in-out;
+    width: 100px;
+    height: 100px;
+    font-size: 20px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.drum-pad:hover {
+    transform: translate(4px, 4px);
 }
 
-.card {
-  padding: 2em;
+.drum-controls {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 50px;
+    line-height: 2.5;
 }
 
-.read-the-docs {
-  color: #888;
+.description {
+    height: 40px;
+    width: 190px;
+    background-color: #7b7171;
+    border: 1px solid #2f3f2f;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
